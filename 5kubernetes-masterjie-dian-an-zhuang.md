@@ -65,7 +65,7 @@ $
 
 ## 安装和配置 flanneld
 
-参考 [05-部署Flannel网络.md](./05-部署Flannel网络.md)
+参考 [Flannel安装与配置.md](4flannelan-zhuang-he-pei-zhi.md)
 
 ## 创建 kubernetes 证书
 
@@ -78,7 +78,7 @@ $ cat > kubernetes-csr.json <<EOF
   "hosts": [
     "127.0.0.1",
     "${MASTER_IP}",
-    "${CLUSTER_KUBERNETES_SVC_IP}",
+    "10.254.0.1",
     "kubernetes",
     "kubernetes.default",
     "kubernetes.default.svc",

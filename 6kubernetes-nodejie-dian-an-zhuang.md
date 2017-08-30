@@ -11,10 +11,10 @@ kubernetes Node 节点包含如下组件：
 
 ## 安装和配置 flanneld
 
-参考 [部署Flannel网络.md](./4、Flannel安装和配置.md)
+参考 [部署Flannel网络.md](4flannelan-zhuang-he-pei-zhi.md)
 
 ## 安装和配置 docker
-参考 [Docker安装手册.md](./05-部署Flannel网络.md)
+参考 [Docker安装手册.md](0dockeran-zhuang.md)
 
 ### 检查 docker 服务
 
