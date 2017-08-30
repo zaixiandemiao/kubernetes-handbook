@@ -14,6 +14,7 @@ Centos 7
 下面介绍使用cfssl生成所需要的私钥和证书.
 ## 安装[cfssl](https://github.com/cloudflare/cfssl)
 ### 方式一：直接使用二进制包安装  
+
 ```
 $ wget https://pkg.cfssl.org/R1.2/cfssl_linux-amd64
 $ chmod +x cfssl_linux-amd64
@@ -163,7 +164,7 @@ mkdir -p /var/lib/etcd
 ```
 export ETCD_NAME=node1
 export INTERNAL_IP=192.168.202.131
-cat > /usr/lib/systemd/system/etcd.service <<EOF
+cat  /usr/lib/systemd/system/etcd.service
 [Unit]
 Description=etcd server
 After=network.target
@@ -198,14 +199,14 @@ LimitNOFILE=65536
 WantedBy=multi-user.target
 EOF
 ```
-* --data-dir指定了etcd的工作目录和数据目录是/var/lib/etcd
-* --cert-file和--key-file分别指定etcd的公钥证书和私钥
-* --peer-cert-file和--peer-key-file分别指定了etcd的Peers通信的公钥证书和私钥。
-* --trusted-ca-file指定了客户端的CA证书
-* --peer-trusted-ca-file指定了Peers的CA证书
-* --initial-cluster-state new表示这是新初始化集群，--name指定的参数值必须在--initial-cluster中  
+* `--data-dir`指定了etcd的工作目录和数据目录是`/var/lib/etcd`
+* `--cert-file`和`--key-file`分别指定etcd的公钥证书和私钥
+* `--peer-cert-file`和`--peer-key-file`分别指定了etcd的Peers通信的公钥证书和私钥。
+* `--trusted-ca-file`指定了客户端的CA证书
+* `--peer-trusted-ca-file`指定了Peers的CA证书
+* `--initial-cluster-state new`表示这是新初始化集群，`--name`指定的参数值必须在`--initial-cluster`中  
 
-**注意**：在etcd.pem生成时hosts配置了Ip地址列表和hostname列表，在etcd的service(/usr/lib/systemd/system/etcd.service)文件中，所有ip不能代替为未包含的hostname，如master
+**注意**：在etcd.pem生成时hosts配置了Ip地址列表和hostname列表，在etcd的service(`/usr/lib/systemd/system/etcd.service`)文件中，所有ip不能代替为未包含的hostname，如master
 ## 启动Etcd
 在各节点上启动etcd：
 ```
@@ -256,6 +257,7 @@ ETCDCTL_KEY=/etc/etcd/ssl/etcd-key.pem
 $ source /etc/etcd/etcdctl
 ```
 3. 查看集群状态
+
 ```
 $ etcdctl cluster-health
 
