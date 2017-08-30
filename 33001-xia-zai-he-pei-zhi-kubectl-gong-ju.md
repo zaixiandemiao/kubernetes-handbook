@@ -21,7 +21,7 @@ $ export KUBE_APISERVER="https://${MASTER_IP}:6443"
 $
 ```
 
-+ 变量 KUBE_APISERVER 指定 kubelet 访问的 kube-apiserver 的地址，后续被写入 `~/.kube/config` 配置文件；
++ 变量 KUBE_APISERVER 指定 kubelet 访问的 kube-apiserver 的地址，后续被写入`~/.kube/config` 配置文件；
 
 ## 下载 kubectl
 
