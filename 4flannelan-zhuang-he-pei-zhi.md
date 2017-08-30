@@ -50,8 +50,8 @@ FLANNEL_OPTIONS="-etcd-cafile=/etc/etcd/ssl/ca.pem -etcd-certfile=/etc/etcd/ssl/
 ## 在etcd中创建网络配置
 执行下面的命令为docker分配IP地址段，用于启动容器时分配ip
 ```
-etcdctl mkdir /kube-centos/network
-etcdctl mk /kube-centos/network/config "{ \"Network\": \"10.254.0.0/16\", \"SubnetLen\": 24, \"Backend\": { \"Type\": \"vxlan\" } }"
+$ etcdctl mkdir /kube-centos/network
+$ etcdctl mk /kube-centos/network/config "{ \"Network\": \"10.254.0.0/16\", \"SubnetLen\": 24, \"Backend\": { \"Type\": \"vxlan\" } }"
 ```
 ip地址需要为10开头的，kubernetes集群安装kube-dns时，配置为别的曾经出错
 ## 启动flannel
@@ -74,17 +74,17 @@ $ source /run/flannel/subnet.env
 
 ## 查询Etcd中的内容
 ```
-$etcdctl ls /kube-centos/network/subnets
+$ etcdctl ls /kube-centos/network/subnets
 /kube-centos/network/subnets/10.254.14.0-24
 /kube-centos/network/subnets/10.254.38.0-24
 /kube-centos/network/subnets/10.254.46.0-24
-$etcdctl get /kube-centos/network/config
+$ etcdctl get /kube-centos/network/config
 { "Network": "10.254.0.0/16", "SubnetLen": 24, "Backend": { "Type": "vxlan" } }
-$etcdctl get /kube-centos/network/subnets/10.254.14.0-24
+$ etcdctl get /kube-centos/network/subnets/10.254.14.0-24
 {"PublicIP":"10.254.0.114","BackendType":"vxlan","BackendData":{"VtepMAC":"56:27:7d:1c:08:22"}}
-$etcdctl get /kube-centos/network/subnets/10.254.38.0-24
+$ etcdctl get /kube-centos/network/subnets/10.254.38.0-24
 {"PublicIP":"10.254.0.115","BackendType":"vxlan","BackendData":{"VtepMAC":"12:82:83:59:cf:b8"}}
-$etcdctl get /kube-centos/network/subnets/10.254.46.0-24
+$ etcdctl get /kube-centos/network/subnets/10.254.46.0-24
 {"PublicIP":"10.254.0.113","BackendType":"vxlan","BackendData":{"VtepMAC":"e6:b2:fd:f6:66:96"}}
 ```
 ## 查询ip
