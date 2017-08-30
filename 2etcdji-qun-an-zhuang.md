@@ -166,10 +166,10 @@ $ yum install -y etcd
 mkdir -p /var/lib/etcd
 ```
 使用systemctl启动和管理etcd服务，在每个节点上创建etcd的systemd unit文件/usr/lib/systemd/system/etcd.service，注意替换ETCD_NAME和INTERNAL_IP变量的值：
-```
-export ETCD_NAME=node1
-export INTERNAL_IP=192.168.202.131
-cat  /usr/lib/systemd/system/etcd.service
+``` bash
+$ export ETCD_NAME=node1
+$ export INTERNAL_IP=192.168.202.131
+$ cat  /usr/lib/systemd/system/etcd.service
 [Unit]
 Description=etcd server
 After=network.target
@@ -202,7 +202,6 @@ LimitNOFILE=65536
 
 [Install]
 WantedBy=multi-user.target
-EOF
 ```
 * `--data-dir`指定了etcd的工作目录和数据目录是`/var/lib/etcd`
 * `--cert-file`和`--key-file`分别指定etcd的公钥证书和私钥
