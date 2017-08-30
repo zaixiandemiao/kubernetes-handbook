@@ -7,4 +7,5 @@
 * [4、Flannel安装和配置](4flannelan-zhuang-he-pei-zhi.md)
 * [5、Kubernetes Master节点安装](5kubernetes-masterjie-dian-an-zhuang.md)
 * [6、Kubernetes Node节点安装](6kubernetes-nodejie-dian-an-zhuang.md)
+* [7、安装kubedns插件](73001-an-zhuang-kubedns-cha-jian.md)
 
