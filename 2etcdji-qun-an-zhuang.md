@@ -228,7 +228,7 @@ journalctl -f
 
 如果日志一切正常，可以使用`etcdctl`检查集群是否健康，在任一节点执行：
 ```
-etcdctl \
+$ etcdctl \
   --ca-file=/etc/etcd/ssl/ca.pem \
   --cert-file=/etc/etcd/ssl/etcd.pem \
   --key-file=/etc/etcd/ssl/etcd-key.pem \
