@@ -1,6 +1,7 @@
 # Summary
 
 * [文档介绍](README.md)
+* [0、Docker安装](0dockeran-zhuang.md)
 * [1、创建CA证书和私钥](chapter1.md)
 * [2、Etcd集群安装](2etcdji-qun-an-zhuang.md)
 * [3、下载和配置kubectl工具](33001-xia-zai-he-pei-zhi-kubectl-gong-ju.md)
@@ -11,5 +12,5 @@
 * [8、安装dashboard](83001-an-zhuang-dashboard.md)
 * [9、Heapster+InfluxDB+Grafana安装（监控模块）](9heapster+influxdb+grafanaan-zhuang-ff08-jian-kong-mo-kuai-ff09.md)
 * [10、EFK\(Elasticsearch+Fluent+Kibana\)安装\(日志采集\)](10efkelasticsearch+fluent+kibanaan-88c528-ri-zhi-cai-96c629.md)
-* [11、私有仓库（Harbor）的搭建](113001-si-you-cang-ku-ff08-harbor-ff09-de-da-jian.md)
+* 0、Docker安装
 

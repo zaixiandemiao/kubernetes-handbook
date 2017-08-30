@@ -12,7 +12,9 @@ Centos 7
 * etcd.pem
 * etcd-key.pem  
 下面介绍使用cfssl生成所需要的私钥和证书.
+
 ## 安装[cfssl](https://github.com/cloudflare/cfssl)
+
 ### 方式一：直接使用二进制包安装  
 
 ```
@@ -30,7 +32,9 @@ $ sudo mv cfssl-certinfo_linux-amd64 /root/local/bin/cfssl-certinfo
 
 $ export PATH=/root/local/bin:$PATH
 ```
+
 ### 方式二：使用go命令安装
+
 如果系统中安装过Go的话，可以直接使用命令安装
 ```
 $ go get -u github.com/cloudflare/cfssl/cmd/...
@@ -70,6 +74,7 @@ ca-config.json中可以定义多个profile，分别设置不同的expiry和usage
 * signing表示此CA证书可以用于签名其他证书，ca.pem中的CA=TRUE
 * server auth表示TLS Server Authentication, 即client可以用该 CA 对server提供的证书进行验证
 * client auth表示TLS Client Authentication，即server可以用该CA对client提供的证书进行验证
+
 ### 创建CA证书签名请求配置ca-csr.json：
 ```
 {
