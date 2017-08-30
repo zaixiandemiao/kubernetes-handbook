@@ -18,6 +18,6 @@
 
 # 参考博客
 
-本安装手册主要参考了开源书[Kubernetes handbook](https://rootsongjc.gitbooks.io/kubernetes-handbook/content/)中的最佳实践部分，[青蛙小白](http://blog.frognew.com)的博客也给了我很多帮助，在此表示感谢。在实践中，结合自己在安装中遇到的一些坑，进行了适当的修改，得到这篇手册，以方便自己日后的使用
+本安装手册主要参考了开源书[Kubernetes handbook](https://rootsongjc.gitbooks.io/kubernetes-handbook/content/)中的最佳实践部分，[青蛙小白](http://blog.frognew.com)的博客也给了我很多帮助，在此表示感谢。在实践中，结合自己在安装中遇到的一些坑，进行了适当的修改，得到这篇手册，以方便自己日后的使用。文档还没有完善好，近期可能会有一些变动。
 
 
