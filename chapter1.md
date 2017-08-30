@@ -5,7 +5,8 @@
 ## 安装 `CFSSL`
 
 ```
-$ wget https://pkg.cfssl.org/R1.2/cfssl_linux-amd64$ chmod +x cfssl_linux-amd64
+$ wget https://pkg.cfssl.org/R1.2/cfssl_linux-amd64
+$ chmod +x cfssl_linux-amd64
 $ sudo mv cfssl_linux-amd64 /root/local/bin/cfssl
 
 $ wget https://pkg.cfssl.org/R1.2/cfssljson_linux-amd64
