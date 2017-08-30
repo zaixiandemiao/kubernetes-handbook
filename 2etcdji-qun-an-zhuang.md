@@ -247,6 +247,7 @@ cluster is healthy
 
 ## etcdctl配置
 由于使用了TLS安全认证，etcdctl 查询时需要在命令行中指定证书和endpoints，会使得一条命令变得很长，可以预先创建一个etcdctl配置文件，进行相应的配置.
+
 1. 创建etcdctl配置文件
 ```
 $ vi /etc/etcd/etcdctl
@@ -261,10 +262,8 @@ ETCDCTL_KEY=/etc/etcd/ssl/etcd-key.pem
 $ source /etc/etcd/etcdctl
 ```
 3. 查看集群状态
-
 ```
 $ etcdctl cluster-health
-
 2017-04-24 19:53:40.545148 I | warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
 2017-04-24 19:53:40.546127 I | warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
 member 4f2f99d70000fc19 is healthy: got healthy result from https://192.168.202.132:2379
@@ -272,6 +271,7 @@ member 99a756f799eb4163 is healthy: got healthy result from https://192.168.202.
 member a9aff19397de2e4e is healthy: got healthy result from https://192.168.202.133:2379
 cluster is healthy
 ```
+
 etcdctl配置的本质是定义ETCDCTL_ENDPOINT常量，etcdctl运行时读取该常量值，进行连接，具体的常量名称可以参考官方的配置说明[etcdctl config](https://github.com/coreos/etcd/tree/master/etcdctl)
 
 ## 参考
