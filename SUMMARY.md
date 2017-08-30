@@ -9,4 +9,6 @@
 * [6、Kubernetes Node节点安装](6kubernetes-nodejie-dian-an-zhuang.md)
 * [7、安装kubedns插件](73001-an-zhuang-kubedns-cha-jian.md)
 * [8、安装dashboard](83001-an-zhuang-dashboard.md)
+* [9、Heapster+InfluxDB+Grafana安装（监控模块）](9heapster+influxdb+grafanaan-zhuang-ff08-jian-kong-mo-kuai-ff09.md)
+* [10、EFK\(Elasticsearch+Fluent+Kibana\)安装\(日志采集\)](10efkelasticsearch+fluent+kibanaan-88c528-ri-zhi-cai-96c629.md)
 
