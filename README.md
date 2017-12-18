@@ -1,6 +1,6 @@
 # Kubernetes安装手册
 
-本文档介绍Kubernetes1.6.x集群的安装
+本文档介绍Kubernetes1.6.x集群的安装, GitBook地址[kubernetes-install](https://www.gitbook.com/book/zaixiandemiao/kubernetes-install/details)
 
 # 集群详情
 
